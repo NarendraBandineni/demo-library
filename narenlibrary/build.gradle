@@ -42,7 +42,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.bandineni-narendra'
             artifactId = 'demo-library'
-            version = '0.0.0'
+            version = '0.0.2'
 
             afterEvaluate {
                 from components.release

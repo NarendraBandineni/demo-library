@@ -1,2 +1,7 @@
 jdk:
-  - openjdk11
+  - openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+install:
+  - FILE="-Dfile=narenlibrary-release.aar"
+  - mvn install:install-file $FILE -DgroupId=com.github.bandineni-narendra -DartifactId=demo-library -Dversion=0.0.2 -Dpackaging=aar -DgeneratePom=true
